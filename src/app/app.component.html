@@ -1,14 +1,13 @@
 <ion-app>
-  <ion-split-pane>
-    <ion-menu>
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
+    <ion-header>
+      <ion-toolbar>
+        <ion-menu-button menu="main-menu" color="dark"></ion-menu-button>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-menu side="start" menuId="main-menu" type="overlay" contentId="main-content">
         <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+          <ion-menu-toggle *ngFor="let p of appPages">
             <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
               <ion-icon slot="start" [name]="p.icon"></ion-icon>
               <ion-label>
@@ -17,8 +16,13 @@
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
-      </ion-content>
-    </ion-menu>
-    <ion-router-outlet main></ion-router-outlet>
-  </ion-split-pane>
+        <ion-list>
+          <ion-item lines="none">
+            <ion-icon color="medium" name="heart-empty"></ion-icon>
+            <ion-label color="medium">...by k4ren</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-menu>
+    </ion-content>
+  <ion-router-outlet  id="main-content"></ion-router-outlet>
 </ion-app>
