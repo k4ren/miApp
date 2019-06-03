@@ -15,5 +15,8 @@ export class HomePage {
   goPowers(){
     this.router.navigate(['powers']);
   }
+  goInfo(){
+    this.router.navigate(['informations']);
+  }
 
 }
