@@ -24,8 +24,8 @@ export class HomePage {
     this.router.navigate(['informations']);
   }
 
-  ngOnInit() {
-    this.geolocation.getCurrentPosition().then(res => {
+  async ngOnInit() {
+   await this.geolocation.getCurrentPosition().then(res => {
       this.lat = res.coords.latitude;
       this.lng = res.coords.longitude;
       console.log(this.lat);
