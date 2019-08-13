@@ -9,37 +9,54 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <ion-card class="welcome-card">
-      <ion-img src="https://img.europapress.es/fotoweb/fotonoticia_20190302130725_640.jpg"></ion-img>
-      <ion-card-header>
-        <ion-card-subtitle>Love Goose</ion-card-subtitle>
-        <ion-card-title>Who is Goose?</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
-        <p>lat: {{ lat }}</p>
-        <p>lng: {{ lng }}</p>
-        <ion-item lines="none">
-          <ion-button fill="outline" slot="end" color="secondary" (click)="goInfo()">More info</ion-button>
-        </ion-item>
-      </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>More</ion-label>
-      </ion-list-header>
-      <ion-item>
-        <ion-icon slot="start" color="medium" name="flash"></ion-icon>
-        <ion-label (click)="goPowers()">Powers</ion-label>
-      </ion-item>
-      <ion-item disabled>
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>History</ion-label>
-      </ion-item>
-      <ion-item disabled>
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Galery</ion-label>
-      </ion-item>
-    </ion-list>
+<ion-content padding>
+  <ion-card> 
+    <ion-card-header>
+      <ion-card-title>
+        example name
+      </ion-card-title>
+      <ion-card-subtitle>
+        <ion-icon name="calendar" color="dark"></ion-icon>
+        Sat Nov 9, 2019 - 12:55 PM
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      this is a test example, some long text to test the UI displaying a long description, more details about the example goes here. 
+    </ion-card-content>
+    <ion-item lines="none">
+      <ion-button fill="outline" size="small"><ion-icon name="eye"></ion-icon></ion-button>
+      <ion-button fill="outline" size="small" color="warning"><ion-icon name="create"></ion-icon></ion-button>
+      <ion-button fill="outline" size="small" color="danger"><ion-icon name="trash"></ion-icon></ion-button>
+      <ion-button slot="end" fill="outline" color="success">
+        <ion-icon slot="end" name="checkbox-outline"></ion-icon>
+        example
+      </ion-button>
+    </ion-item>
+  </ion-card>
+  <ion-card> 
+    <ion-card-header>
+      <ion-card-title>
+        example name
+      </ion-card-title>
+      <ion-card-subtitle>
+        <ion-icon name="calendar" color="dark"></ion-icon>
+        Sat Nov 9, 2019 - 12:55 PM
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      this is a test example, some long text to test the UI displaying a long description, more details about the example goes here. 
+    </ion-card-content>
+    <ion-item lines="none">
+      <ion-button fill="outline" size="small"><ion-icon name="eye"></ion-icon></ion-button>
+      <ion-button fill="outline" size="small" color="warning"><ion-icon name="create"></ion-icon></ion-button>
+      <ion-button fill="outline" size="small" color="danger"><ion-icon name="trash"></ion-icon></ion-button>
+      <ion-button slot="end" fill="outline" color="success">
+        <ion-icon slot="end" name="checkbox-outline"></ion-icon>
+        Attend
+      </ion-button>
+    </ion-item>
+  </ion-card>
 </ion-content>
+<ion-footer padding>
+  <ion-button expand="full">New example</ion-button>
+</ion-footer>
